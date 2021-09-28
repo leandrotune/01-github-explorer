@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-    mode: 'development',
+    mode: 'development', // executar o webpack no modo de desenvolvimento
     entry: path.resolve(__dirname, 'src', 'index.jsx'),// entry: tradução entrada, arquivo inicial da aplicação
     output: {
         path: path.resolve(__dirname, 'dist'), // arquivo que vou gerar com webpack
