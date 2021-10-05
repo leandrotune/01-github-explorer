@@ -1,3 +1,5 @@
+const repositoryName = 'unform'
+
 export function RepositoryList(){
     return (
         <section className="repository-list">
@@ -5,7 +7,7 @@ export function RepositoryList(){
 
             <ul>
                 <li>
-                    <strong>unform</strong>
+                    <strong>{repositoryName}</strong>
                     <p>Froms in React</p>
 
                     <a href="">
