@@ -6,13 +6,13 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 module.exports = {
     mode: isDevelopment? 'development' : 'production', // verificar se estou em processo de desenvolvimento ou produção
     devtool: isDevelopment ?'eval-source-map' : 'source-map',
-    entry: path.resolve(__dirname, 'src', 'index.jsx'),// entry: tradução entrada, arquivo inicial da aplicação
+    entry: path.resolve(__dirname, 'src', 'index.tsx'),// entry: tradução entrada, arquivo inicial da aplicação
     output: {
         path: path.resolve(__dirname, 'dist'), // arquivo que vou gerar com webpack
         filename: 'bundle.js'
     }, 
     resolve: {
-        extensions: ['.js', '.jsx'], // arquivos que podem se lidos (javascript e jsx)
+        extensions: ['.js', '.jsx', '.ts', '.tsx'], // arquivos que podem se lidos (javascript e jsx)
     },
     devServer: {
         static: {
@@ -29,7 +29,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx$/,
+                test: /\.(j|t)sx$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
